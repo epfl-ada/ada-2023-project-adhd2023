@@ -1,5 +1,5 @@
 # Hack for IMDb rating
-## Datastory 
+
 ## Abstract
 
 Amidst the ever-evolving landscape of the global film industry, understanding the factors that lead to a film's success has become crucial. With millions of viewers relying on film ratings to guide their viewing choices, it's essential to delve into what drives these ratings. This project aims to unravel the parameters that significantly influence a film's rating, utilizing the extensive IMDb database as its primary resource. While conventional factors and directorial prowess are often highlighted, our study seeks to uncover the subtler, yet pivotal elements that contribute to a film's acclaim, by employing a comprehensive analytical approach, and by dissecting various components. The goal is to not only understand the visible layers of what makes a film favorable but also to identify the underlying factors often overlooked. This research could serve as a vital tool for filmmakers, critics, and enthusiasts alike, providing insights into the anatomy of highly rated movies.
