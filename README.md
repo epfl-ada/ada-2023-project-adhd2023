@@ -14,6 +14,8 @@ Our analysis will put the light on the movie rating. The research questions that
 
 
 ## Additional datasets
+All the data can be found in this drive [link](https://drive.google.com/drive/folders/1AVWmDZJu_jlTUsLwY5mGE8g8C7LtoTc3?usp=sharing)  
+
 •**IMDb Rating Dataset**:
 Our analysis integrates the IMDb rating dataset taken from [IMDb Datasets](https://datasets.imdbws.com). This dataset comprises two CSV files: *rating_id.csv:* Contains IMDb rating data and *name_id.csv:* Includes additional information about the movies (name, type, ...).
 
@@ -54,40 +56,16 @@ Matching algorithm are highly sensitive to outliers in text and our data include
 
 •**IMDB Data**
 
-we first merge our metadata with the IMDb dataset based on the `movie_name` and `start_year`. we noticed that the new data included tvshows, short movies and other non significant types of movies so we proceeded to remove them and filtered the movies who had less than 200 reviews since we agreed that they weren't significant in our analysis.
+We first merge our metadata with the IMDb dataset based on the `movie_name` and `start_year`. We noticed that the new data included tvshows, short movies and other non significant types of movies so we proceeded to remove them and filtered the movies who had less than 200 reviews since we agreed that they weren't significant in our analysis.
 
 ### Step 2: Analysing Metadata Factors 
 
-The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies: 
+The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies. In this analysis we included the **Language Factor** and **Era Factor** in which we compared the rating means, accounting for a 95% confidence interval and ran a T-test, also in **Number Of Votes Factor** we used linear regression to see how the rating changes with the number of votes and in **Runtime Factor** we used Pearson correlation coefficient to find the optimal movie length.
 
-**-Language Factor**
-
-When analysing the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
-
-**-Era Factor**
-
-When analysing the year of release effect on rating we used t-test alongside some historical fact about movies to draw a conclusion on how this factor affect IMDb rating.
-
-**-Number Of Votes Factor**
-
-We used linear regression to see how the rating changes with the number of votes.
-
-**-Production Country Factor**
-
-
-**-Movie Runtime Factor**
-
-We analyzed the relation between movie runtime and the average rating with the objective to find an optimal movie length. We used Pearson correlation coefficient to spot a small but positive result.
 
 ### Step 3: Analysing Plot Factors
 
-The plot of a movie can be a significant factor in determining both its high and low rankings so we dedicated a lot of analysis to reveal how a movie can take advantage of it to climb the IMDb ranking ladder 
-
-•**Real Stories Effect**
-
-We used the bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ).
-After that for every movie we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score.
-After some inspections we notice that we get a good similarity between events and movies at a threshold of approximately 0.77. after that we calculate the IMDb rating mean of movies that have a similarity score greater than 0.77 and less than 0.77 and we notice that there is a statistically significant difference. Movies that are related to real life events seem to have a better rating.
+The plot of a movie can be a significant factor in determining both its high and low rankings so we dedicated a lot of analysis to reveal how a movie can take advantage of it to climb the IMDb ranking ladder we used the Bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ). Then we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score. We agreed that a plot with similarity above 0.77 with an event is considered a real story movie. Movies that are related to real life events seem to have a better rating.
 
 
 ## PLANS FOR MILESTONE 3
@@ -138,27 +116,27 @@ After further investigations of the factors that make a movie have good or bad r
   <tr>
     <td class="tg-0lax">Ali Ridha Mrad </td>
     <td class="tg-0lax">@Ali-Mrad </td>
-    <td class="tg-0lax">  </td>
+    <td class="tg-0lax"> Trend analysis<br>Statistic analysis<br>Creation of meaningful visualization <br> Data story development<br> Team management </td>
   </tr>
   <tr>
     <td class="tg-0lax">Aziz Laadhar </td>
     <td class="tg-0lax">@azizlaadhar </td>
-    <td class="tg-0lax"> </td>
+    <td class="tg-0lax">Data cleaning<br>Statistic analysis<br> Creation of meaningful visualization <br> Prediction model <br> World event matching</td>
   </tr>
   <tr>
     <td class="tg-0lax">Mohamed Charfi </td>
     <td class="tg-0lax">@charfimohamed </td>
-    <td class="tg-0lax"> </td>
+    <td class="tg-0lax">Creation of event dataset <br> Data cleaning<br> Map creation<br>Creation of meaningful visualization<br>World event matching </td>
   </tr>
   <tr>
     <td class="tg-0lax">Nikolay Mikhalev </td>
     <td class="tg-0lax">@moteloumka </td>
-    <td class="tg-0lax"> </td>
+    <td class="tg-0lax">Creation of interactive visualization <br> NLP analysis <br> Statistic analysis <br> Trend analysis </td>
   </tr>
   <tr>
     <td class="tg-0lax">Yanis Seddik </td>
     <td class="tg-0lax">@yanvow </td>
-    <td class="tg-0lax"> </td>
+    <td class="tg-0lax">Statistic analysis <br>Creation of interactive visualization <br> Network analysis and actor impact <br> Ethnicity analysis <br> Trend analysis </td>
   </tr>
 </tbody>
 </table>
