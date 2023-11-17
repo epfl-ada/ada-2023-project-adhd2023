@@ -50,7 +50,7 @@ This data included tvshows, short movies and other non significant types of movi
 
 The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies: 
 
-####• Language Factor 
+**•Language Factor**
 
 When analysing for the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
 
