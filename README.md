@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Amidst the ever-evolving landscape of the global film industry, understanding the factors that lead to a film's success has become crucial. With millions of viewers relying on film ratings to guide their viewing choices, it's essential to understand what drives these ratings. This project aims to reveal the parameters that significantly influence a film's rating, using the extensive IMDb database as its primary resource. 
+Amidst the ever-evolving landscape of the global film industry, understanding the factors that lead to a film's success has become crucial. With millions of viewers relying on film ratings to guide their viewing choices, it's essential to understand what drives these ratings. This project aims to reveal the parameters that significantly influence a film's rating, using the IMDb database as its primary resource. 
 While primary factors such as budget, genre and cast could be applied for a primary analysis, we aim to perform a deeper and more meaningful search on the elements that combined together in the right way, tend to yield a high ranking.
 Such an analysis would be a useful tool in the hands of a filmmaker, critic or just a movie enthusiast, seeking to understand in a more meaningful way the demands of the viewers, depending on the needed era, geographical area or genre one is interested in.
 
