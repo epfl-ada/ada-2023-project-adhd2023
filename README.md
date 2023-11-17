@@ -101,32 +101,21 @@ We are willing to analyse the effect of diversity in terms of gender and ethnici
    ### Step 3: Happy or Sad movie ending effect on the IMDb rating 
 We are willing to use an NLP model to classify movie summaries to know if a movie is has a happy ending or a sad ending. Depending in the results we might try web scraping methods to extract the movie endings from Wikipedia. 
 
-  
 
   ### Step 4: Creating a machine learning model to predict movie ratings from the significant factors that we analysed
 After further investigations of the factors that make a movie have good or bad ratings we will create a model that predicts the IMDb rating based on those inputs. We will be working on deploying our model on the website so that we can write the inputs (to be defined) on the website and run the model on this input to get the IMDb prediction (we could use Cloud Run in google cloud platform or find another way to deploy it).
 
 ### Proposed timeline
-.
-├── 21.11.22 - Perform paired matching
+. 
+├── 26.11.23 - Step 1
 │  
-├── 23.11.22 - Perform trend analysis
+├── 03.12.23 - step 2
 │  
-├── 25.11.22 - (Optional) Include IMDb rating
-│  
-├── 28.11.22 - Pause project work
-│  
-├── 02.12.22 - Homework 2 deadline
+├── 10.12.23 - step 3
 │    
-├── 05.12.22 - Perform final analysis
+├── 17.12.24 - step 4
 │  
-├── 12.12.22 - Develop draft for data story
-│  
-├── 15.12.22 - Finalize code implementations and visualizations
-│  
-├── 18.12.22 - Finalize data story
-│  
-├── 23.12.22 - Milestone 3 deadline
+├── 22.12.22 - Milestone 3 deadline
 │  
 .
 
