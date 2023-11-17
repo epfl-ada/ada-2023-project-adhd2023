@@ -58,17 +58,22 @@ we first merge our metadata with the IMDb dataset based on the `movie_name` and 
 
 The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies: 
 
-**•Language Factor**
+**-Language Factor**
 
-When analysing for the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
+When analysing the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
 
-•**Era Factor**
+**-Era Factor**
 
-•**Number Of Votes Factor**
+When analysing the year of release effect on rating we used t-test alongside some historical fact about movies to draw a conclusion on how this factor affect IMDb rating.
 
-•**Production Country Factor**
+**-Number Of Votes Factor**
 
-•**Movie Runtime Factor**
+We used linear regression to see how the rating changes with the number of votes.
+
+**-Production Country Factor**
+
+
+**-Movie Runtime Factor**
 
 
 ### Step 3: Analysing Plot Factors
