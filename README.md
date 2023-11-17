@@ -82,7 +82,19 @@ We will train a logistic_regression model to fit our analysed data and test it o
 
 
 
-## TODO //
+## PLANS FOR MILESTONE 3
+  Adding an analysis on the movie budget in relation with the imdb rating 
+Data set : https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download&select=movies_metadata.csv
+We are willing to merge our datasets  with the dataset above to extract the movie budget. After that we will analyse the effect of the movie budget on the IMDb rating. Does a movie budget really influence the rating or is it more the story of the movie that makes the difference ? 
+
+Happy or Sad movie ending effect on the IMDb rating 
+We are willing to use an NLP model to classify movie summaries to know if a movie is has a happy ending  or a sad ending. If we don’t get good results we can try web scraping methods to extract the movie ending. 
+
+Gender and Ethnicity diversity effect on the IMDb rating
+We are willing to analyse the effect of diversity in terms of gender and ethnicity on the IMDb score. To do that we will try to create a new metric for every movie that combines the number of ethnicities in a movies and the percentage of male and female. Then analyse this metric effect on the IMDb rating. We might analyse as well the effect of this metric on certain countries to emphasize the open mindness of certain countries. 
+
+Creating a machine learning model to predict movie ratings from the significant factors that we analysed
+After further investigations of the factors that make a movie have good or bad ratings we will create a model that predicts the IMDb rating based on those inputs. We will be working on deploying our model on the website so that we can write the inputs (to be defined) on the website and run the model on this input to get the IMDb prediction (we could use Cloud Run in google cloud platform or find another way to deploy it).
 ### Proposed timeline
 .
 ├── 21.11.22 - Perform paired matching
