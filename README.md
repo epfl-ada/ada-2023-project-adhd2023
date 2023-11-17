@@ -2,7 +2,9 @@
 
 ## Abstract
 
-Amidst the ever-evolving landscape of the global film industry, understanding the factors that lead to a film's success has become crucial. With millions of viewers relying on film ratings to guide their viewing choices, it's essential to delve into what drives these ratings. This project aims to reveal the parameters that significantly influence a film's rating, utilizing the extensive IMDb database as its primary resource. While conventional factors and directorial prowess are often highlighted, our study seeks to uncover the subtler, yet pivotal elements that contribute to a film's acclaim, by employing a comprehensive analytical approach, and by dissecting various components. The goal is to not only understand the visible layers of what makes a film favorable but also to identify the underlying factors often overlooked. This research could serve as a vital tool for filmmakers, critics, and enthusiasts alike, providing insights into the anatomy of highly rated movies.
+Amidst the ever-evolving landscape of the global film industry, understanding the factors that lead to a film's success has become crucial. With millions of viewers relying on film ratings to guide their viewing choices, it's essential to understand what drives these ratings. This project aims to reveal the parameters that significantly influence a film's rating, using the extensive IMDb database as its primary resource. 
+While primary factors such as budget, genre and cast could be applied for a primary analysis, we aim to perform a deeper and more meaningful search on the elements that combined together in the right way, tend to yield a high ranking.
+Such an analysis would be a useful tool in the hands of a filmmaker, critic or just a movie enthusiast, seeking to understand in a more meaningful way the demands of the viewers, depending on the needed era, geographical area or genre one is interested in.
 
 ## Research questions
 Our analysis will put the light on the movie Rating The research questions that we would like to answer falls into three domains: 
