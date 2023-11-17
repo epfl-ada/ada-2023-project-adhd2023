@@ -75,6 +75,8 @@ We used linear regression to see how the rating changes with the number of votes
 
 
 **-Movie Runtime Factor**
+We analyzed the relation between movie runtime and the average rating with the objective to find an optimal movie length. We used Pearson correlation coefficient to spot a small but positive result.
+
 
 
 ### Step 3: Analysing Plot Factors
