@@ -7,7 +7,7 @@ While primary factors such as budget, genre, cast and plot could be applied for 
 Such an analysis would be a useful tool in the hands of a filmmaker, critic or just a movie enthusiast, seeking to understand in a more meaningful way the demands of the viewers, depending on the needed era, geographical area or genre one is interested in.
 
 ## Research questions
-Our analysis will put the light on the movie rating.  The research questions that we would like to answer falls into three domains: 
+Our analysis will put the light on the movie rating. The research questions that we would like to answer are: 
 1) What are the parameters contributing to a movie success and how interpretate them.
 2) Does real world event related movie, are more likely to achieve great success.
 3) Is it possible to create a model in order to predict movie rating using the relevent and spotted parameters
