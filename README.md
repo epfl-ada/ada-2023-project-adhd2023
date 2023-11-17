@@ -143,12 +143,12 @@ After further investigations of the factors that make a movie have good or bad r
   <tr>
     <td class="tg-0lax">Aziz Laadhar </td>
     <td class="tg-0lax">@azizlaadhar </td>
-    <td class="tg-0lax">Data cleaning<br>Statistic analysis<br> Creation of meaningful visualization <br> Prediction model</td>
+    <td class="tg-0lax">Data cleaning<br>Statistic analysis<br> Creation of meaningful visualization <br> Prediction model <br> World event matching</td>
   </tr>
   <tr>
     <td class="tg-0lax">Mohamed Charfi </td>
     <td class="tg-0lax">@charfimohamed </td>
-    <td class="tg-0lax">creation of event dataset <br> Data cleaning<br> Map creation<br>Creation of meaningful visualization<br>World event matching </td>
+    <td class="tg-0lax">Creation of event dataset <br> Data cleaning<br> Map creation<br>Creation of meaningful visualization<br>World event matching </td>
   </tr>
   <tr>
     <td class="tg-0lax">Nikolay Mikhalev </td>
@@ -158,7 +158,7 @@ After further investigations of the factors that make a movie have good or bad r
   <tr>
     <td class="tg-0lax">Yanis Seddik </td>
     <td class="tg-0lax">@yanvow </td>
-    <td class="tg-0lax"> </td>
+    <td class="tg-0lax">Statistic analysis <br>Creation of interactive visualization <br> Network analysis and actor impact <br> ethnicity analyis </td>
   </tr>
 </tbody>
 </table>
