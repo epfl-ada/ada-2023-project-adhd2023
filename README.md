@@ -14,6 +14,7 @@ Our analysis will put the light on the movie rating. The research questions that
 
 
 ## Additional datasets
+all the data can be found in this drive [link]([https://datasets.imdbws.com](https://drive.google.com/drive/folders/1AVWmDZJu_jlTUsLwY5mGE8g8C7LtoTc3?usp=sharing)) : 
 •**IMDb Rating Dataset**:
 Our analysis integrates the IMDb rating dataset taken from [IMDb Datasets](https://datasets.imdbws.com). This dataset comprises two CSV files: *rating_id.csv:* Contains IMDb rating data and *name_id.csv:* Includes additional information about the movies (name, type, ...).
 
