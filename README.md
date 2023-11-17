@@ -126,7 +126,7 @@ After further investigations of the factors that make a movie have good or bad r
   <tr>
     <td class="tg-0lax">Mohamed Charfi </td>
     <td class="tg-0lax">@charfimohamed </td>
-    <td class="tg-0lax">Creation of event dataset <br> Data cleaning<br> Map creation<br>Creation of meaningful visualization<br>World event matching </td>
+    <td class="tg-0lax">Creation of event dataset <br> Data cleaning<br> Map creation<br>Creation of meaningful visualization<br>World event matching <br> BERT embeddings </td>
   </tr>
   <tr>
     <td class="tg-0lax">Nikolay Mikhalev </td>
