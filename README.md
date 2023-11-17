@@ -38,6 +38,7 @@ This dataset contain metadata for all 45,000 movies listed in the Full MovieLens
 
 ### BERT : 
 
+
 ## Executed timeline
 
 ### Step 1: Data Pre-Processing 
@@ -82,9 +83,9 @@ The plot of a movie can be a significant factor in determining both its high and
 
 •**Real Stories Effect**
 
-We used BERT to
-
-•**Plot Ending Effect**
+We used the bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ).
+After that for every movie we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score.
+After some inspections we notice that we get a good similarity between events and movies at a threshold of approximately 0.77. after that we calculate the IMDb rating mean of movies that have a similarity score greater than 0.77 and less than 0.77 and we notice that there is a statistically significant difference. Movies that are related to real life events seem to have a better rating.
 
 
 ### Step 4: Predicting IMDb rating
@@ -96,18 +97,21 @@ We will train a logistic_regression model to fit our analysed data and test it o
 
 
 ## PLANS FOR MILESTONE 3
-  Adding an analysis on the movie budget in relation with the imdb rating 
-Data set : https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download&select=movies_metadata.csv
-We are willing to merge our datasets  with the dataset above to extract the movie budget. After that we will analyse the effect of the movie budget on the IMDb rating. Does a movie budget really influence the rating or is it more the story of the movie that makes the difference ? 
 
-Happy or Sad movie ending effect on the IMDb rating 
-We are willing to use an NLP model to classify movie summaries to know if a movie is has a happy ending  or a sad ending. If we don’t get good results we can try web scraping methods to extract the movie ending. 
+  ### Step 1: Adding an analysis on the movie budget in relation with the imdb rating 
+We are willing to merge our datasets with the dataset above to extract the movie budget. After that we will analyse the effect of the movie budget on the IMDb rating.
 
-Gender and Ethnicity diversity effect on the IMDb rating
-We are willing to analyse the effect of diversity in terms of gender and ethnicity on the IMDb score. To do that we will try to create a new metric for every movie that combines the number of ethnicities in a movies and the percentage of male and female. Then analyse this metric effect on the IMDb rating. We might analyse as well the effect of this metric on certain countries to emphasize the open mindness of certain countries. 
+  ### Step 2: Gender and Ethnicity diversity effect on the IMDb rating
+We are willing to analyse the effect of diversity in terms of gender and ethnicity on the IMDb score. To do that we will try to create a new metric for every movie that combines the number of ethnicities in a movies and the percentage of male and female. Then analyse this metric effect on the IMDb rating. We also aim to combine this analysis with the isuing country analysis we did to refine the latter.
 
-Creating a machine learning model to predict movie ratings from the significant factors that we analysed
+   ### Step 3: Happy or Sad movie ending effect on the IMDb rating 
+We are willing to use an NLP model to classify movie summaries to know if a movie is has a happy ending or a sad ending. Depending in the results we might try web scraping methods to extract the movie endings from Wikipedia. 
+
+  
+
+  ### Step 4: Creating a machine learning model to predict movie ratings from the significant factors that we analysed
 After further investigations of the factors that make a movie have good or bad ratings we will create a model that predicts the IMDb rating based on those inputs. We will be working on deploying our model on the website so that we can write the inputs (to be defined) on the website and run the model on this input to get the IMDb prediction (we could use Cloud Run in google cloud platform or find another way to deploy it).
+
 ### Proposed timeline
 .
 ├── 21.11.22 - Perform paired matching
