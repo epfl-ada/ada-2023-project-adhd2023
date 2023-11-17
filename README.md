@@ -58,16 +58,12 @@ We first merge our metadata with the IMDb dataset based on the `movie_name` and 
 
 ### Step 2: Analysing Metadata Factors 
 
-The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies. In this analysis we included the **language factor** and **Era Factor** in which we compared the rating means, accounting for a 95% confidence interval and ran a T-test, also in **Number Of Votes Factor** we used linear regression to see how the rating changes with the number of votes and in **Runtime Factor** we used Pearson correlation coefficient to find the optimal movie length.
+The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies. In this analysis we included the **Language Factor** and **Era Factor** in which we compared the rating means, accounting for a 95% confidence interval and ran a T-test, also in **Number Of Votes Factor** we used linear regression to see how the rating changes with the number of votes and in **Runtime Factor** we used Pearson correlation coefficient to find the optimal movie length.
 
 
 ### Step 3: Analysing Plot Factors
 
-The plot of a movie can be a significant factor in determining both its high and low rankings so we dedicated a lot of analysis to reveal how a movie can take advantage of it to climb the IMDb ranking ladder 
-
-•**Real Stories Effect**
-
-We used the Bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ). After that for every movie we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score. We agreed that a plot with similarity above 0.77 with an event is considered a real story movie. Movies that are related to real life events seem to have a better rating.
+The plot of a movie can be a significant factor in determining both its high and low rankings so we dedicated a lot of analysis to reveal how a movie can take advantage of it to climb the IMDb ranking ladder we used the Bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ). Then we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score. We agreed that a plot with similarity above 0.77 with an event is considered a real story movie. Movies that are related to real life events seem to have a better rating.
 
 
 ## PLANS FOR MILESTONE 3
