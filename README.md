@@ -36,14 +36,34 @@ This dataset is a collection of data from The Academy Awards Database, containin
 
 • Movie Metadata 
 For our goal, the data was almost clean, we only removed some outliers.
+
+• Movie Plot Summaries 
+Matching algorithm are highly sensitive to outliers in text and our data included undesired words to describe the type of the plot but the were all between brackets so we proceeded to remove them.
+
 • IMDB Data
+This data included tvshows, short movies and other non significant types of movies so we proceeded to remove them by merging with our movie_metadata based on the movie_name and start_year and filtered the movies who had less than 200 reviews since we agreed that they weren't significant in our analysis. 
 
-• Historical Events 
-• Oscars Data
+### Step 2: Analysing Metadata Factors 
 
-### Step 2:
+The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies: 
+• Language Factor 
+When analysing for the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
 
-### Step 3:
+• Era Factor 
+
+• Number Of Votes Factor
+
+• Production Country Factor
+
+• Movie Runtime Factor
+
+
+### Step 3: Analysing Plot Factors
+
+The plot of a movie can be a significant factor in determining both its high and low rankings so we dedicated a lot of analysis to reveal how a movie can take advantage of it to climb the IMDb ranking ladder 
+
+• Real Stories Effect 
+We all know that a real story movie 
 
 ### Step 4:
 
