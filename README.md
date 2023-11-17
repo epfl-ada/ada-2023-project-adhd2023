@@ -58,26 +58,8 @@ We first merge our metadata with the IMDb dataset based on the `movie_name` and 
 
 ### Step 2: Analysing Metadata Factors 
 
-The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies: 
+The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies. In this analysis we included the **language factor** and **Era Factor** in which we compared the rating means, accounting for a 95% confidence interval and ran a T-test, also in **Number Of Votes Factor** we used linear regression to see how the rating changes with the number of votes and in **Runtime Factor** we used Pearson correlation coefficient to find the optimal movie length.
 
-•**Language Factor**
-
-When analysing the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
-
-**•Era Factor**
-
-When analysing the year of release effect on rating we used t-test alongside some historical fact about movies to draw a conclusion on how this factor affect IMDb rating.
-
-**•Number Of Votes Factor**
-
-We used linear regression to see how the rating changes with the number of votes.
-
-**•Production Country Factor**
-
-
-**•Movie Runtime Factor**
-
-We analyzed the relation between movie runtime and the average rating with the objective to find an optimal movie length. We used Pearson correlation coefficient to spot a small but positive result.
 
 ### Step 3: Analysing Plot Factors
 
