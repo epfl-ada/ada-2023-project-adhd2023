@@ -106,7 +106,7 @@ We are willing to use an NLP model to classify movie summaries to know if a movi
 After further investigations of the factors that make a movie have good or bad ratings we will create a model that predicts the IMDb rating based on those inputs. We will be working on deploying our model on the website so that we can write the inputs (to be defined) on the website and run the model on this input to get the IMDb prediction (we could use Cloud Run in google cloud platform or find another way to deploy it).
 
 ### Proposed timeline
-. 
+.
 ├── 26.11.23 - Step 1  
 │  
 ├── 03.12.23 - step 2  
