@@ -54,13 +54,13 @@ Matching algorithm are highly sensitive to outliers in text and our data include
 
 •**IMDB Data**
 
-we first merge our metadata with the IMDb dataset based on the `movie_name` and `start_year`. we noticed that the new data included tvshows, short movies and other non significant types of movies so we proceeded to remove them and filtered the movies who had less than 200 reviews since we agreed that they weren't significant in our analysis.
+We first merge our metadata with the IMDb dataset based on the `movie_name` and `start_year`. We noticed that the new data included tvshows, short movies and other non significant types of movies so we proceeded to remove them and filtered the movies who had less than 200 reviews since we agreed that they weren't significant in our analysis.
 
 ### Step 2: Analysing Metadata Factors 
 
 The movies metadata helped us draw several helpful conclusions about how to increase the IMDb rating of movies: 
 
-**-Language Factor**
+•**Language Factor**
 
 When analysing the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
 
@@ -85,9 +85,7 @@ The plot of a movie can be a significant factor in determining both its high and
 
 •**Real Stories Effect**
 
-We used the bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ).
-After that for every movie we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score.
-After some inspections we notice that we get a good similarity between events and movies at a threshold of approximately 0.77. after that we calculate the IMDb rating mean of movies that have a similarity score greater than 0.77 and less than 0.77 and we notice that there is a statistically significant difference. Movies that are related to real life events seem to have a better rating.
+We used the Bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ). After that for every movie we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score. We agreed that a plot with similarity above 0.77 with an event is considered a real story movie. Movies that are related to real life events seem to have a better rating.
 
 
 ## PLANS FOR MILESTONE 3
