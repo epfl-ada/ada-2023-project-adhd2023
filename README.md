@@ -30,11 +30,14 @@ This dataset contain metadata for all 45,000 movies listed in the Full MovieLens
 
 ### 
 
-### T-tests :
+### T-tests : a statistical test used to compare the means of two groups to determine if they are significantly different from each other.
 
-### Linear regression :
+### Pearson correlation coefficient: use PCC to determine linear correlation between set of data.
 
-### BERT : 
+### Linear regression :  a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to observed data.
+
+### BERT : BERT Large by Hugging Face is a larger, more complex version of the BERT model, using bidirectional processing for enhanced language understanding.
+
 
 
 ## Executed timeline
