@@ -138,7 +138,7 @@ After further investigations of the factors that make a movie have good or bad r
   <tr>
     <td class="tg-0lax">Ali Ridha Mrad </td>
     <td class="tg-0lax">@Ali-Mrad </td>
-    <td class="tg-0lax">  Trend analysis <br> Creation of meaningful visualization </td>
+    <td class="tg-0lax">  Trend analysis <br>Statistic analysis<br>Creation of meaningful visualization <br> Data story development<br> Team management </td>
   </tr>
   <tr>
     <td class="tg-0lax">Aziz Laadhar </td>
