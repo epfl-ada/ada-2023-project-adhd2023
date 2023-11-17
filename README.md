@@ -140,5 +140,3 @@ After further investigations of the factors that make a movie have good or bad r
   </tr>
 </tbody>
 </table>
-
-#### References
