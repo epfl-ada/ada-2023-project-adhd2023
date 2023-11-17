@@ -52,7 +52,7 @@ Matching algorithm are highly sensitive to outliers in text and our data include
 
 •**IMDB Data**
 
-This data included tvshows, short movies and other non significant types of movies so we proceeded to remove them by merging with our movie_metadata based on the movie_name and start_year and filtered the movies who had less than 200 reviews since we agreed that they weren't significant in our analysis. 
+we first merge our metadata with the IMDb dataset based on the `movie_name` and `start_year`. we noticed that the new data included tvshows, short movies and other non significant types of movies so we proceeded to remove them and filtered the movies who had less than 200 reviews since we agreed that they weren't significant in our analysis.
 
 ### Step 2: Analysing Metadata Factors 
 
