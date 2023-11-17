@@ -158,7 +158,7 @@ After further investigations of the factors that make a movie have good or bad r
   <tr>
     <td class="tg-0lax">Yanis Seddik </td>
     <td class="tg-0lax">@yanvow </td>
-    <td class="tg-0lax">Statistic analysis <br>Creation of interactive visualization <br> Network analysis and actor impact <br> ethnicity analyis </td>
+    <td class="tg-0lax">Statistic analysis <br>Creation of interactive visualization <br> Network analysis and actor impact <br> Ethnicity analysis <br> Trend analysis </td>
   </tr>
 </tbody>
 </table>
