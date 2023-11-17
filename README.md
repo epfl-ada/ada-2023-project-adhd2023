@@ -64,18 +64,18 @@ The movies metadata helped us draw several helpful conclusions about how to incr
 
 When analysing the factor of languages present in a film, we compared the rating means, accounting for a 95% confidence interval. Further we ran a Mann-Whitney-U test on the movies associated to popular languages and analysed the p-values observed.
 
-**-Era Factor**
+**•Era Factor**
 
 When analysing the year of release effect on rating we used t-test alongside some historical fact about movies to draw a conclusion on how this factor affect IMDb rating.
 
-**-Number Of Votes Factor**
+**•Number Of Votes Factor**
 
 We used linear regression to see how the rating changes with the number of votes.
 
-**-Production Country Factor**
+**•Production Country Factor**
 
 
-**-Movie Runtime Factor**
+**•Movie Runtime Factor**
 
 We analyzed the relation between movie runtime and the average rating with the objective to find an optimal movie length. We used Pearson correlation coefficient to spot a small but positive result.
 
