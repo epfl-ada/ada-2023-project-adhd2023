@@ -107,17 +107,17 @@ After further investigations of the factors that make a movie have good or bad r
 
 ### Proposed timeline
 . 
-├── 26.11.23 - Step 1
+├── 26.11.23 - Step 1  
+│  
+├── 03.12.23 - step 2  
 │  
-├── 03.12.23 - step 2
+├── 10.12.23 - step 3  
+│  
+├── 17.12.24 - step 4  
+│    
+├── 22.12.22 - Milestone 3 deadline  
 │  
-├── 10.12.23 - step 3
-│    
-├── 17.12.24 - step 4
-│  
-├── 22.12.22 - Milestone 3 deadline
-│  
-.
+.  
 
 
 
