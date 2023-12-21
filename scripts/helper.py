@@ -313,3 +313,25 @@ def plot_p_values(p_values):
     plt.xlabel('Language')
     plt.ylabel('P-Value')
     plt.show()
+
+def SDI(x):
+    """
+    Calculate the Shannon Diversity Index (SDI) of a list of values.
+
+    Parameters:
+    -----------
+    x : array-like
+        A list or array containing numeric values representing the frequencies of different categories.
+
+    Returns:
+    --------
+    float
+        The Shannon Diversity Index value.
+    """
+    N = x.sum()
+    sdi = 0
+    for i in x:
+        if i > 0:
+            freq = i / N
+            sdi += -freq * np.log(freq)
+    return sdi
