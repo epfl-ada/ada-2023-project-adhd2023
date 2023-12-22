@@ -18,7 +18,7 @@ Our analysis will put the light on the movie rating. The research questions that
 
 ## Base dataset
 
-Incorporating the CMU Movie Summary dataset as our foundational dataset, we leverage a diverse compilation extracted from English-language Wikipedia and Freebase. Comprising plot summaries, corenlp-processed summaries, movie metadata, and character metadata, this core dataset forms the backbone of our analysis. With over 42,000 movies and 450,000 characters, the dataset, enriched through the Stanford CoreNLP pipeline, provides a comprehensive and essential resource for exploring the intricate dynamics influencing movie ratings.
+Incorporating the [CMU Movie Summary dataset](https://www.cs.cmu.edu/~ark/personas/) as our foundational dataset, we leverage a diverse compilation extracted from English-language Wikipedia and Freebase. Comprising plot summaries, corenlp-processed summaries, movie metadata, and character metadata, this core dataset forms the backbone of our analysis. With over 42,000 movies and 450,000 characters, the dataset, enriched through the Stanford CoreNLP pipeline, provides a comprehensive and essential resource for exploring the intricate dynamics influencing movie ratings.
 
 ## Additional datasets
 
