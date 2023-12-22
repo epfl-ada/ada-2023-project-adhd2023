@@ -35,15 +35,15 @@ This dataset is a collection of data from The Academy Awards Database, containin
 
 ## Methods
 
- **T-tests**: a statistical test used to compare the means of two groups to determine if they are significantly different from each other.
+ **T-tests**: a statistical test used to compare the means of two groups to determine if they are significantly different from each other. This allowed us to see which factors, such as language, era, number of votes, runtime, and oscars, are most important in determining a movie's IMDb rating.
 
- **Pearson correlation coefficient**: use PCC to determine linear correlation between set of data.
+ **Pearson correlation coefficient**: use PCC to determine linear correlation between set of data. This allowed us to see which variables are most strongly related to a movie's IMDb rating. We also used this to identify the optimal length for a movie's runtime.
 
- **Linear regression**:  a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to observed data.
+ **Linear regression**:  a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to observed data. This allowed us to predict the IMDb rating of a movie based on its characteristics.
 
- **BERT**: BERT Large by Hugging Face is a larger, more complex version of the BERT model, using bidirectional processing for enhanced language understanding.
+ **BERT**: BERT Large by Hugging Face is a larger, more complex version of the BERT model, using bidirectional processing for enhanced language understanding. This allowed us to compare the similarity between the plot of a movie and real-world events. We used this to identify movies that are related to real-life events and to see if these movies tend to have higher IMDb ratings.
 
- **Paired Matching**: We used paired matching to check for causlity in observed correlations. To match the two groups we standardized the continuous variables, calculated propensity scores and match based on genre and propensity score with a threshold of >0.95.
+ **Paired Matching**: We used paired matching to check for causlity in observed correlations. To match the two groups we standardized the continuous variables, calculated propensity scores and match based on genre and propensity score with a threshold of >0.95. This allowed us to determine whether the relationship between a movie's metadata and rating is causal or just correlational.
 
 ## Executed timeline
 
