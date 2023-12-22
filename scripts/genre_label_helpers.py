@@ -196,10 +196,7 @@ def show_model(model, top_to_show=5):
 
     for index, row in filtered_model_df.iterrows():
         genre = row['Genre']
-        coef = row['Coefficient'] 
-        std_error = row['Standard Error']
-        ci_lower = row['95% CI Lower']
-        ci_upper = row['95% CI Upper']
+        coef = row['Coefficient']
         
         # Add a bar trace with custom error bars
         fig.add_trace(go.Bar(
@@ -208,9 +205,7 @@ def show_model(model, top_to_show=5):
             orientation='h',
             error_x=dict(
                 type='data',
-                symmetric=False,
-                array=[ci_upper],
-                arrayminus=[ci_lower]
+                symmetric=False
             ),
             name=genre
         ))

@@ -233,8 +233,18 @@ def get_genre_dummies(genres_df):
     Returns:
     DataFrame: A DataFrame with dummy variables representing the genres.
     """
-    
+
     dummy_variables = pd.get_dummies(genres_df.apply(lambda x: list(x.values())).explode())
     dummy_variables = dummy_variables.groupby(dummy_variables.index).sum()  # Group by movie ID
     dummy_variables = dummy_variables.astype(int)
     return dummy_variables
+
+def filter_by_year(df, min_year, max_year):
+    df = df.copy()
+    df = df[df['movie_release_year'] < max_year]
+    df = df[df['movie_release_year'] > min_year]
+    # transform_genres_string is in regression_loader_helpers.py
+    genres_series = df['movie_genres'].apply(transform_genres_string)
+    genre_counts = genres_series.apply(lambda x: list(x.values())).explode().value_counts()
+    
+    return genre_counts.head(10)
