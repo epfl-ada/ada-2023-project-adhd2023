@@ -194,6 +194,7 @@ def t_test_on_language(language_to_test, df, elim_English=False):
     statistic, p_value = stats.ttest_ind(group_a, group_others)  
     return statistic, p_value
 
+# commented out because the kernel crashes when using torch
 def encode(text, max_length=512):
     """
     Encodes the given text into a BERT embedding.

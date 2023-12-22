@@ -59,7 +59,7 @@ def create_labels_df(threshold = 0.5, path_to_file = 'data/DeBERTa-v3/complete_D
     df = df.set_index('wiki_movie_id')
     #checking that no duplicate indexes are present
     assert len(df.index) == df.index.nunique()
-    df = df['labels'].apply(ast.literal_eval)
+    df = df['topics'].apply(ast.literal_eval)
     #filtering out labels that are below the threshold
     df = df.apply(lambda x: filter_dictionnary(x, threshold))
     assert len(df.index) == df.index.nunique()
@@ -153,7 +153,7 @@ def show_label_means(labels_with_rating, nb_to_show=5):
     - nb_to_show (int): Number of top means to display.
     """
 
-    mean_ratings = labels_with_rating.explode('labels').groupby('labels')['averageRating'].mean()
+    mean_ratings = labels_with_rating.explode('topics').groupby('topics')['averageRating'].mean()
     mean_ratings = mean_ratings.sort_values(ascending=False).head(nb_to_show)
     fig = go.Figure(data=[go.Bar(x=mean_ratings.values, y=mean_ratings.index, orientation='h')])
     fig.update_layout(
@@ -164,7 +164,7 @@ def show_label_means(labels_with_rating, nb_to_show=5):
     # Show the plot
     fig.show()
 
-def show_model(model,top_to_show=5):
+def show_model(model, top_to_show=5):
     """
     Displays a horizontal bar plot of model coefficients with confidence intervals.
 

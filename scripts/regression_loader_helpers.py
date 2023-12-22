@@ -16,6 +16,7 @@ def basic_one_hot_encoded(df, column_name):
     Returns:
     pandas.DataFrame: The DataFrame with the one-hot encoded column converted into individual columns.
     """
+
     df = df.copy()
     df = df[column_name]
     df = df.apply(lambda x: ast.literal_eval(x))
@@ -33,6 +34,7 @@ def rename_columns_fill_0_1(df):
     Returns:
         pandas.DataFrame: The modified DataFrame with renamed columns and filled values.
     """
+
     df = df.copy()
     for col in df.columns:
         df.rename(columns={col: df[col].dropna().unique()[0]}, inplace=True)
@@ -50,6 +52,7 @@ def filter_columns(df, lower_bound , upper_bound ):
     Returns:
         pandas.DataFrame: The filtered DataFrame.
     """
+
     if not upper_bound:
         upper_bound = df.shape[0]
 
@@ -73,6 +76,7 @@ def numerize(df):
     Returns:
         pandas.DataFrame: The numerized DataFrame.
     """
+
     df = df.copy()
     for col in df.columns:
         df[col] = df[col].astype(int)
@@ -88,6 +92,7 @@ def delete_empty_rows(df):
     Returns:
         pandas.DataFrame: The DataFrame with empty rows removed.
     """
+
     df = df.copy()
     df = df.loc[(df != 0).any(axis=1)]
     return df
@@ -107,6 +112,7 @@ def get_one_hot_encoded_df(df, column_name, lower_bound = 0, upper_bound = None,
     Returns:
         pandas.DataFrame: The one-hot encoded DataFrame.
     """
+
     df = df.copy()
     if not upper_bound:
         upper_bound = df.shape[0]
@@ -156,23 +162,59 @@ def get_metadata_subset(full_metadata_df, genre = None, period = None, language 
     return df
 
 def transform_genres_string(genres_str):
+    """
+    Transforms a string representation of genres into a dictionary.
+
+    Args:
+        genres_str (str): The string representation of genres.
+
+    Returns:
+        dict: A dictionary representing the genres.
+
+    Raises:
+        None
+    """
+
     try:
         genres_dict = json.loads(genres_str.replace("'", "\""))  # Replace single quotes with double quotes
         return genres_dict
     except json.JSONDecodeError:
         return {}
     
-def get_genres_series(df,lower_bound, upper_bound):
+def get_genres_series(df, lower_bound, upper_bound):
+    """
+    Returns a filtered series of movie genres based on the lower and upper bounds.
+
+    Parameters:
+    df (DataFrame): The input DataFrame containing the movie genres.
+    lower_bound (int): The lower bound for filtering the genres.
+    upper_bound (int): The upper bound for filtering the genres.
+
+    Returns:
+    Series: A filtered series of movie genres.
+    """
+
     genres_df = df.copy()
     genres_df['movie_genres'] = genres_df['movie_genres'].apply(transform_genres_string)
     genres_df = genres_df['movie_genres']
     genres_df = filter_genres(genres_df, lower_bound, upper_bound)
     return genres_df
 
-#for filtering out genres with less than threshold movies
-def filter_genres(genres_df,lower_bound, upper_bound):    
+
+def filter_genres(genres_df, lower_bound, upper_bound):
+    """
+    Filters the genres in the given DataFrame based on their occurrence count.
+
+    Args:
+        genres_df (pandas.DataFrame): DataFrame containing genres as columns and their occurrence count as values.
+        lower_bound (int): The minimum occurrence count for a genre to be included in the filtered DataFrame.
+        upper_bound (int): The maximum occurrence count for a genre to be included in the filtered DataFrame.
+
+    Returns:
+        pandas.DataFrame: Filtered DataFrame containing genres that meet the occurrence count criteria.
+    """
+
     genre_counts = genres_df.apply(lambda x: list(x.values())).explode().value_counts()
-    #genre_counts = genre_counts[ upper_bound > genre_counts].astype(int)
     genre_counts = genre_counts[genre_counts > lower_bound].astype(int)
     genre_counts = genre_counts.sort_values(ascending=True)
     top_genres_value_list = genre_counts.index.tolist()
@@ -180,11 +222,19 @@ def filter_genres(genres_df,lower_bound, upper_bound):
     genres_df = genres_df[genres_df.apply(bool)]
     return genres_df.copy()
 
-#getting genrres in one hot encoding
+
 def get_genre_dummies(genres_df):
+    """
+    Converts a DataFrame of genres into dummy variables.
+
+    Parameters:
+    genres_df (DataFrame): A DataFrame containing genres information.
+
+    Returns:
+    DataFrame: A DataFrame with dummy variables representing the genres.
+    """
+    
     dummy_variables = pd.get_dummies(genres_df.apply(lambda x: list(x.values())).explode())
     dummy_variables = dummy_variables.groupby(dummy_variables.index).sum()  # Group by movie ID
     dummy_variables = dummy_variables.astype(int)
     return dummy_variables
-
-

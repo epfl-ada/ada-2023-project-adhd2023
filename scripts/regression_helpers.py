@@ -8,7 +8,19 @@ from sklearn.metrics import  mean_absolute_error
 from wordcloud import WordCloud
 import statsmodels.api as sm
 
-def linear_regression(X_column_names,y_column_names, df):
+def linear_regression(X_column_names, y_column_names, df):
+    """
+    Perform linear regression on the given DataFrame.
+
+    Parameters:
+    X_column_names (list): List of column names to be used as independent variables.
+    y_column_names (str): Name of the column to be used as the dependent variable.
+    df (pandas.DataFrame): Input DataFrame containing the data.
+
+    Returns:
+    tuple: A tuple containing the trained model, mean absolute error on the training set, and mean absolute error on the test set.
+    """
+
     df_train = df.sample(frac=0.85, random_state=1)
     df_test = df.drop(df_train.index)
 
@@ -22,6 +34,17 @@ def linear_regression(X_column_names,y_column_names, df):
     return model, mae_train, mae_test
 
 def filter_model_information(model, ci_threshold=0.1):
+    """
+    Filters the model information based on p-value and confidence interval.
+
+    Args:
+        model: The regression model object.
+        ci_threshold: The threshold for the width of the confidence interval.
+
+    Returns:
+        filtered_model_df: The filtered model information dataframe.
+    """
+
     model_df = pd.DataFrame(model.summary().tables[1])
 
     model_df.columns = model_df.iloc[0]
@@ -42,6 +65,15 @@ def filter_model_information(model, ci_threshold=0.1):
 
 
 def show_model(model,top_to_show=5, ci_threshold=0.1):
+    """
+    Display a bar plot of the coefficients influencing the rating.
+
+    Parameters:
+    - model: The regression model object.
+    - top_to_show: The number of top and bottom coefficients to display. Default is 5.
+    - ci_threshold: The confidence interval threshold for filtering coefficients. Default is 0.1.
+    """
+    
     filtered_model_df = filter_model_information(model, ci_threshold=ci_threshold)
     top = filtered_model_df.nlargest(top_to_show, 'Coefficient')
     bottom = filtered_model_df.nsmallest(top_to_show, 'Coefficient')
@@ -52,10 +84,7 @@ def show_model(model,top_to_show=5, ci_threshold=0.1):
 
     for index, row in filtered_model_df.iterrows():
         genre = row['Key Word']
-        coef = row['Coefficient'] 
-        std_error = row['Standard Error']
-        ci_lower = row['95% CI Lower']
-        ci_upper = row['95% CI Upper']
+        coef = row['Coefficient']
         
         # Add a bar trace with custom error bars
         fig.add_trace(go.Bar(
@@ -71,13 +100,25 @@ def show_model(model,top_to_show=5, ci_threshold=0.1):
         xaxis_title='Coefficient Value',
         title='Coefficients influencing the rating',
         barmode='group'  # Use 'group' to display multiple bars per genre
-)
+    )
 
-# Show the plot
+    # Show the plot
     fig.show()
 
 # Custom color functions for gradients
 class ColorFuncWithGradient(object):
+    """
+    A callable class that generates color values based on word frequency.
+
+    Args:
+        color_hue (int): The hue value for the color.
+        word_freq (dict): A dictionary containing word frequencies.
+
+    Returns:
+        str: A color value in HSL format.
+
+    """
+
     def __init__(self, color_hue, word_freq):
         self.color_hue = color_hue
         self.word_freq = word_freq
