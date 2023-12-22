@@ -65,20 +65,21 @@ The movies metadata helped us draw several helpful conclusions about how to incr
 
 The plot of a movie can be a significant factor in determining both its high and low rankings so we dedicated a lot of analysis to reveal how a movie can take advantage of it to climb the IMDb ranking ladder we used the Bert-Large-cased model from Hugging Face to tokenize and create embeddings for the plot summaries and the events description (this model took 20 hours to run :) ). Then we compare the embedding of the summary to every embedding of the events description and assign each movie to an event based on the best similarity score. We agreed that a plot with similarity above 0.77 with an event is considered a real story movie. Movies that are related to real life events seem to have a better rating.
 
-### Step 4: 
+### Step 4: Analysis of the Academy Awards on the IMDb rating
 
+We analysed the effect of an actor reveiving an award for the role in a movie on the rating. We also analysed the effect of a best picture award on the rating.
 
 ### Step 5: Gender and Ethnicity diversity effect on the IMDb rating
 
-We are willing to analyse the effect of diversity in terms of gender and ethnicity on the IMDb score. To do that we will try to create a new metric for every movie that combines the number of ethnicities in a movies and the percentage of male and female. Then analyse this metric effect on the IMDb rating. We also aim to combine this analysis with the isuing country analysis we did to refine the latter.
+We analyzed the effect of diversity in terms of gender and ethnicity on the IMDb score. To do that, we created two metrics for every movie that combined the number of ethnicities in a movie and the percentage of male and female. Then, we analyzed these metrics' effect on the IMDb rating. We also aimed to combine this analysis with the issuing country analysis we did to refine the latter.
 
-### Step 6: Happy or Sad movie ending effect on the IMDb rating
+### Step 6: Movie topics effect on the IMDb rating
 
-We are willing to use an NLP model to classify movie summaries to know if a movie is has a happy ending or a sad ending. Depending in the results we might try web scraping methods to extract the movie endings from Wikipedia.
+We used an NLP model to classify movie summaries to know the topics of the contained in the movie.
 
-### Step 7: Created a machine learning model to predict movie ratings from the significant factors that we analysed
+### Step 7: Create a machine learning model to predict movie ratings from the significant factors that we analysed
 
-After further investigations of the factors that make a movie have good or bad ratings we will create a model that predicts the IMDb rating based on those inputs. We will be working on deploying our model on the website so that we can write the inputs (to be defined) on the website and run the model on this input to get the IMDb prediction (we could use Cloud Run in google cloud platform or find another way to deploy it).
+After investigating factors that make a movie have good or bad ratings we created a model that predicts the IMDb rating based on those inputs.
 
 ### Proposed timeline
 
