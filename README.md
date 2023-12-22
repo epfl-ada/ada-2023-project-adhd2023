@@ -16,6 +16,10 @@ Our analysis will put the light on the movie rating. The research questions that
 2) Does real world event related movie, are more likely to achieve great success.
 3) Is it possible to create a model in order to predict movie rating using the relevent and spotted parameters
 
+## Base dataset
+
+Incorporating the CMU Movie Summary dataset as our foundational dataset, we leverage a diverse compilation extracted from English-language Wikipedia and Freebase. Comprising plot summaries, corenlp-processed summaries, movie metadata, and character metadata, this core dataset forms the backbone of our analysis. With over 42,000 movies and 450,000 characters, the dataset, enriched through the Stanford CoreNLP pipeline, provides a comprehensive and essential resource for exploring the intricate dynamics influencing movie ratings.
+
 ## Additional datasets
 
 All the data can be found in this drive [link](https://drive.google.com/drive/folders/1AVWmDZJu_jlTUsLwY5mGE8g8C7LtoTc3?usp=sharing)
